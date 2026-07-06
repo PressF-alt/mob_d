@@ -59,9 +59,10 @@
 Изучить структуру Android-проекта в среде разработки Android Studio, освоить процесс создания и модификации пользовательского интерфейса, научиться запускать приложение на эмуляторе, а также закрепить навыки работы с файлами ресурсов.
 
 ## Скриншоты
-![Работающий Проект](<img width="1892" height="995" alt="L1" src="https://github.com/user-attachments/assets/f95eb7d3-f5d9-4254-93bf-32f824c897f1" />)  
+Структура проекта  
+<img width="1892" height="995" alt="L1" src="https://github.com/user-attachments/assets/f95eb7d3-f5d9-4254-93bf-32f824c897f1" />
 <br>
-![Структура Проекта](Structure.png)
+Работающий проект
 
 ## Listing
 ```xml
