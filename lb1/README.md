@@ -1,3 +1,4 @@
+<img width="1892" height="995" alt="L1" src="https://github.com/user-attachments/assets/f95eb7d3-f5d9-4254-93bf-32f824c897f1" />
 # Лабораторная работа №1
 
 <div align="center">
