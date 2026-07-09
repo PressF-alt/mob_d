@@ -71,22 +71,23 @@
 
 ## Скриншоты
 
-![Результат выполнения приложения](AppScreenshot.png)  
-*Рисунок 1 – Работа приложения с отображением профиля*
+<img width="328" height="709" alt="Снимок экрана (2)(1)" src="https://github.com/user-attachments/assets/00d94d4f-1384-491c-a4a6-8e2dfcae22ce" />
+*Рисунок 1 – Работа приложения*
 
 <br>
 
-![Режим редактирования](EditMode.png)  
-*Рисунок 2 – Режим редактирования имени пользователя*
+<img width="335" height="716" alt="Снимок экрана (3)(1)(1)" src="https://github.com/user-attachments/assets/cc03fc27-6eda-41a2-9ebc-c4af378dc6a9" />
+*Рисунок 2 – Режим редактирования*
 
 <br>
 
-![Структура проекта](ProjectStructure.png)  
-*Рисунок 3 – Структура проекта с ресурсами*
+
+<img width="553" height="781" alt="struct" src="https://github.com/user-attachments/assets/c934f60f-713b-41fc-b91b-c4f7c428cbdb" />
+*Рисунок 3 – Структура проекта*
 
 ## Листинги
 
-### 1. Итоговый файл activity_main.xml
+### 1. `activity_main.xml`
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -96,264 +97,144 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
-    android:padding="16dp"
+    android:background="@color/gray_light"
     tools:context=".MainActivity">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline_center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
 
     <ImageView
         android:id="@+id/imageAvatar"
         android:layout_width="@dimen/avatar_size"
         android:layout_height="@dimen/avatar_size"
+        android:layout_marginTop="@dimen/margin_normal"
         android:contentDescription="@string/profile_name"
-        android:src="@drawable/ic_profile"
-        android:elevation="8dp"
-        android:outlineProvider="bounds"
-        android:scaleType="centerCrop"
-        android:shadowColor="@color/purple_500"
-        android:shadowRadius="10"
-        app:layout_constraintBottom_toTopOf="@+id/containerName"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/guideline_center" />
+        android:elevation="4dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/textName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/containerName"
+    <TextView
+        android:id="@+id/textName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:elevation="4dp"
-        android:padding="4dp"
-        android:shadowColor="@color/teal_200"
-        android:shadowRadius="6"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/imageAvatar"
-        app:layout_constraintBottom_toTopOf="@+id/textStatus">
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/profile_name"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_name"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAvatar" />
 
-        <TextView
-            android:id="@+id/textName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_name"
-            android:textColor="@color/fraise"
-            android:textSize="@dimen/text_size_name"
-            android:textStyle="bold"
-            android:elevation="4dp"
-            android:shadowColor="@color/purple_200"
-            android:shadowRadius="4"
-            android:shadowDx="2"
-            android:shadowDy="2"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-        <EditText
-            android:id="@+id/editName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/profile_name"
-            android:textColor="@color/fraise"
-            android:textSize="@dimen/text_size_name"
-            android:textStyle="bold"
-            android:background="@android:drawable/editbox_background"
-            android:singleLine="true"
-            android:visibility="gone"
-            android:elevation="4dp"
-            android:shadowColor="@color/teal_200"
-            android:shadowRadius="4"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/editName"
+        android:layout_width="@dimen/edit_min_width"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAvatar" />
 
     <TextView
         android:id="@+id/textStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/margin_small"
         android:text="@string/profile_status"
         android:textColor="@color/purple_500"
         android:textSize="@dimen/text_size_status"
-        android:textStyle="italic"
-        android:elevation="4dp"
-        android:shadowColor="@color/teal_200"
-        android:shadowRadius="6"
-        android:shadowDx="3"
-        android:shadowDy="3"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/containerName"
-        app:layout_constraintBottom_toTopOf="@+id/buttonEdit" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textName" />
+
+    <EditText
+        android:id="@+id/editStatus"
+        android:layout_width="@dimen/edit_min_width"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editName" />
 
     <Button
         android:id="@+id/buttonEdit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="@dimen/margin_normal"
         android:backgroundTint="@color/purple_200"
         android:text="@string/button_edit"
-        android:textColor="@color/black"
-        android:elevation="6dp"
-        android:shadowColor="@color/purple_500"
-        android:shadowRadius="8"
         app:cornerRadius="@dimen/button_corner_radius"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textStatus"
-        app:layout_constraintBottom_toTopOf="@+id/buttonExit" />
-
-    <Button
-        android:id="@+id/buttonExit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="32dp"
-        android:backgroundTint="@color/fraise"
-        android:text="@string/button_exit"
-        android:textColor="@color/white"
-        android:elevation="6dp"
-        android:shadowColor="@color/teal_200"
-        android:shadowRadius="10"
-        app:cornerRadius="@dimen/button_corner_radius"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonEdit"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textStatus" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
-### 2. Файл ресурсов dimens.xml
-
-```xml
-<resources>
-    <dimen name="avatar_size">240dp</dimen>
-    <dimen name="margin_high">32dp</dimen>
-    <dimen name="margin_normal">16dp</dimen>
-    <dimen name="margin_small">8dp</dimen>
-    <dimen name="text_size_name">24sp</dimen>
-    <dimen name="text_size_status">16sp</dimen>
-    <dimen name="button_corner_radius">8dp</dimen>
-</resources>
-```
-
-### 3. Файл ресурсов colors.xml
-
-```xml
-<resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="teal_200">#FF03DAC5</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="gray_light">#F5F5F5</color>
-    <color name="fraise">#FF99D3</color>
-</resources>
-```
-
-### 4. Файл ресурсов strings.xml
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">ProfileApp</string>
-    <string name="profile_name">Пахомов Виктор</string>
-    <string name="profile_status">Android-разработчик</string>
-    <string name="button_edit">Редактировать</string>
-    <string name="button_save">Сохранить</string>
-    <string name="button_exit">Выйти</string>
-    <string name="toast_message">Редактирование профиля</string>
-    <string name="toast_saved">Имя сохранено</string>
-    <string name="toast_exit">Выход из профиля</string>
-</resources>
-```
-
-### 5. MainActivity.kt
+### 2. `MainActivity.kt`
 
 ```kotlin
-package com.example.profileapp
+package com.example.lab4
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
-import android.view.View
-import android.content.Context
-import android.content.SharedPreferences
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var textName: TextView
-    private lateinit var editName: EditText
-    private lateinit var buttonEdit: Button
-    private lateinit var buttonExit: Button
     private var isEditing = false
-    private lateinit var sharedPref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        textName = findViewById(R.id.textName)
-        editName = findViewById(R.id.editName)
-        buttonEdit = findViewById(R.id.buttonEdit)
-        buttonExit = findViewById(R.id.buttonExit)
-
-        sharedPref = getSharedPreferences("ProfilePrefs", Context.MODE_PRIVATE)
-
-        loadSavedData()
+        val textName = findViewById<TextView>(R.id.textName)
+        val textStatus = findViewById<TextView>(R.id.textStatus)
+        val editName = findViewById<EditText>(R.id.editName)
+        val editStatus = findViewById<EditText>(R.id.editStatus)
+        val buttonEdit = findViewById<Button>(R.id.buttonEdit)
 
         buttonEdit.setOnClickListener {
             if (!isEditing) {
-                textName.visibility = View.GONE
-                editName.visibility = View.VISIBLE
                 editName.setText(textName.text)
-                buttonEdit.text = getString(R.string.button_save)
+                editStatus.setText(textStatus.text)
+                textName.visibility = View.GONE
+                textStatus.visibility = View.GONE
+                editName.visibility = View.VISIBLE
+                editStatus.visibility = View.VISIBLE
+                buttonEdit.setText(R.string.button_save)
                 isEditing = true
-                Toast.makeText(this, getString(R.string.toast_message), Toast.LENGTH_SHORT).show()
             } else {
-                val newName = editName.text.toString().trim()
-                if (newName.isNotEmpty()) {
-                    textName.text = newName
-                    saveData(newName)
-                }
-                textName.visibility = View.VISIBLE
+                textName.text = editName.text.toString().trim()
+                textStatus.text = editStatus.text.toString().trim()
                 editName.visibility = View.GONE
-                buttonEdit.text = getString(R.string.button_edit)
+                editStatus.visibility = View.GONE
+                textName.visibility = View.VISIBLE
+                textStatus.visibility = View.VISIBLE
+                buttonEdit.setText(R.string.button_edit)
+                Toast.makeText(this, R.string.toast_saved, Toast.LENGTH_SHORT).show()
                 isEditing = false
-                Toast.makeText(this, getString(R.string.toast_saved), Toast.LENGTH_SHORT).show()
             }
         }
-
-        buttonExit.setOnClickListener {
-            Toast.makeText(this, getString(R.string.toast_exit), Toast.LENGTH_SHORT).show()
-            finish()
-        }
-    }
-
-    private fun saveData(name: String) {
-        with(sharedPref.edit()) {
-            putString("user_name", name)
-            apply()
-        }
-    }
-
-    private fun loadSavedData() {
-        val savedName = sharedPref.getString("user_name", getString(R.string.profile_name))
-        textName.text = savedName
     }
 }
+```
+
+### 3. Ресурсы (`strings.xml`, фрагмент)
+
+```xml
+<string name="profile_name">Спивакова Екатерина</string>
+<string name="profile_status">Прикладная математика и информатика</string>
+<string name="button_edit">Редактировать</string>
+<string name="button_save">Сохранить</string>
+<string name="toast_saved">Профиль сохранён</string>
+```
+
+
 ```
 
 ## Ответы на контрольные вопросы
