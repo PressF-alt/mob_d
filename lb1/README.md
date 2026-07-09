@@ -60,9 +60,8 @@
 
 ## Скриншоты
 Структура проекта  
-<img width="1892" height="995" alt="L1" src="https://github.com/user-attachments/assets/242f2915-1631-43ae-a12a-a739fc02cafa" />
+<img width="1279" height="1280" alt="struct" src="https://github.com/user-attachments/assets/c50ae0a1-f8dc-44d6-b85b-b79197e2dc89" />
 <br>
-Работающий проект
 
 ## Listing
 ```xml
