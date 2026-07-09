@@ -1,3 +1,4 @@
+<img width="276" height="590" alt="Снимок экрана (15)(1)" src="https://github.com/user-attachments/assets/260503ae-5da2-4b4b-b26f-fc6213bf2171" />
 # Отчёт по лабораторной работе №13
 
 ## Создание простого API клиента. Запрос списка постов с jsonplaceholder.typicode.com
@@ -65,28 +66,22 @@
 
 ## Скриншоты
 
-![Главный экран со списком постов](main_screen.png)  
-*Рисунок 1 – Главный экран приложения со списком постов*
+<img width="276" height="590" alt="Снимок экрана (15)(1)" src="https://github.com/user-attachments/assets/9d88fbf3-edde-43e2-b2ca-77c223485bbe" />
+
+*Рисунок 1 – Главный экран*
 
 <br>
-
-![Детальный экран поста](detail_screen.png)  
+<img width="344" height="383" alt="Снимок экрана (16)(1)" src="https://github.com/user-attachments/assets/a1a530bd-6d35-44f4-8fca-676e1483d97c" />
 *Рисунок 2 – Детальный экран с полной информацией о выбранном посте*
 
 <br>
-
-![Состояние загрузки](loading_state.png)  
-*Рисунок 3 – Отображение ProgressBar при загрузке данных*
-
-<br>
-
-![Состояние ошибки](error_state.png)  
-*Рисунок 4 – Отображение ошибки при проблемах с сервером*
+<img width="335" height="577" alt="Снимок экрана (17)(1)" src="https://github.com/user-attachments/assets/a9b0f4fa-533c-420e-8e8e-ccfa78875fb6" />
+*Рисунок 3 – Отображение ошибки при проблемах с сервером*
 
 <br>
 
-![Экран "Нет интернета"](no_internet_screen.png)  
-*Рисунок 5 – Экран, отображаемый при отсутствии интернет-соединения*
+<img width="403" height="758" alt="Снимок экрана (18)(1)" src="https://github.com/user-attachments/assets/123b5996-fc82-4681-afe0-557e899ea3b3" />
+*Рисунок 4 – Экран, отображаемый при отсутствии интернет-соединения*
 
 ## Листинги кода
 
