@@ -1,4 +1,5 @@
 
+
 # Лабораторная работа №3
 
 <div align="center">
@@ -64,17 +65,18 @@
 
 ## Скриншоты
 
-![Результат выполнения приложения](AppScreenshot.png)  
+<img width="576" height="1240" alt="AppScreenshot" src="https://github.com/user-attachments/assets/d32a47ef-81e9-4f12-86f6-e0c9033ba299" />  
 *Рисунок 1 – Работа приложения с отфильтрованными и отсортированными данными*
 
 <br>
 
-![Структура проекта](ProjectStructure.png)  
+<img width="666" height="887" alt="ProjectStructure" src="https://github.com/user-attachments/assets/dac82541-8d1b-4c20-b3c4-fd82ee6f1124" />
+
 *Рисунок 2 – Структура проекта с пакетом models*
 
 <br>
 
-![Код с цепочками вызовов](CodeChains.png)
+<img width="470" height="106" alt="CodeChains" src="https://github.com/user-attachments/assets/219a21aa-5d0f-4875-b804-bbca3f1e84a0" />
 *Рисунок 3 – Пример цепочки filter + sortedBy + map в коде*
 
 ## Листинги
